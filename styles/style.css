@@ -39,6 +39,7 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .header__title {
@@ -240,4 +241,29 @@ img {
   text-shadow: 2px 1px 0px #FF0070;
   line-height: 82.5%;
   font-weight: 700;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--ui-kit);
+  cursor: pointer;
+}
+
+.text__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px #FF0070;
+}
+
+.text__link:hover {
+  color: var(--text-color);
+  border-block-end: 1px solid;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-block-end: 1px solid;
+}
+
+.text__link:focus {
+  outline: none;
+  border: 1px solid var(--text-color);
 }
