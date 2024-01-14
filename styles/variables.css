@@ -10,6 +10,7 @@
   --text-color: #F1B2CE;
   --caption-color: #000028;
   --ft-family: 'IBM Plex mono' , sans-serif;
-  --bg-image: url("../images/cover-image-dark.png");
+  --bg-image: url("/images/cover-image-dark.png");
   --ui-kit: rgba(255, 0, 112, 0.40);
+  --decorative-element: #FF0070;
 } 
