@@ -37,7 +37,21 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .page.theme_light .dot .decorative__word {
+
+  .dot {
     display: none;
   }
+
+  .decorative__word {
+    display: none;
+  }
+
+}
+
+.page.theme_light .dot {
+  display: none;
+}
+
+.page.theme_light .decorative__word {
+  display: none;
 }

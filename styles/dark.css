@@ -21,6 +21,14 @@
   --decorative-element: #FF0070;
 }
 
+.page.theme_dark .dot {
+  display: block;
+}
+
+.page.theme_dark .decorative__word {
+  display: block;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #000028;
