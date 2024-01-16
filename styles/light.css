@@ -16,7 +16,7 @@
   --text-color: #353430;
   --caption-color: #353430;
   --ft-family: 'IBM Plex mono' , sans-serif;
-  --bg-image: url("/images/cover-image-light.png");
+  --bg-image: url("../images/cover-image-light.png");
   --ui-kit: rgba(50, 49, 45, 0.40);
   --decorative-element: #353430;
 }
@@ -30,7 +30,7 @@
     --text-color: #353430;
     --caption-color: #353430;
     --ft-family: 'IBM Plex mono' , sans-serif;
-    --bg-image: url("/images/cover-image-light.png");
+    --bg-image: url("../images/cover-image-light.png");
     --ui-kit: rgba(50, 49, 45, 0.40);
     --decorative-element: #353430;
   }
@@ -38,7 +38,7 @@
 
 @media (prefers-color-scheme: light) {
 
-  .dot {
+  .pseudo__element::before {
     display: none;
   }
 
@@ -48,7 +48,7 @@
 
 }
 
-.page.theme_light .dot {
+.page.theme_light .pseudo__element::before {
   display: none;
 }
 

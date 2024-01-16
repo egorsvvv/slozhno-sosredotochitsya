@@ -12,7 +12,8 @@
 
 .header {
   position: relative;
-  min-height: 100vh;
+  min-height: 668px;
+  height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   align-content: space-around;
@@ -53,7 +54,8 @@
 }
 
 .header__text {
-  width: 491px;
+  max-width: 491px;
+  width: 100%;
   align-self: center;
   justify-self: end;
   line-height: 130%;
@@ -70,13 +72,11 @@
   background-color: var(--accent-color);
 }
 
-.decorative__element {
+.header::before {
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
-}
-
-.decorative__element-top-right {
   top: 20px;
   right: 20px;
   border-style: solid;
@@ -84,7 +84,11 @@
   border-color: var(--decorative-element);
 }
 
-.decorative__element-bottom-left {
+.header::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
   bottom: 20px;
   left: 20px;
   border-style: solid;
@@ -92,7 +96,8 @@
   border-color: var(--decorative-element);
 }
 
-.dot {
+.pseudo__element::before {
+  content: "";
   position: absolute;
   top: 28px;
   right: 29px;
@@ -100,7 +105,7 @@
   height: 9px;
   border-radius: 50%;
   background-color: var(--decorative-element);
-  filter: drop-shadow(0px 0px 4px var(--decorative-element));
+  box-shadow: 0 0 4px 2px var(--decorative-element);;
 }
 
 .decorative__word {
@@ -127,7 +132,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px;
-  margin-block-end: 80px;
+  margin-block-end: 58px;
 }
 
 .title__start {
@@ -172,6 +177,7 @@
   font-weight: 700;
   line-height: 130%;
   margin-block-end: 20px;
+  white-space: pre-line;
 }
 
 .content__last {
@@ -187,6 +193,14 @@
   font-weight: 700;
   line-height: 130%;
   margin-block-end: 20px;
+}
+
+.title-content__last {
+  color: var(--caption-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  margin-block-end: 10px;
 }
 
 .content__image {
@@ -239,11 +253,36 @@ img {
 
 .footer {
   position: relative;
-  min-height: 100vh;
+  min-height: 668px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  right: 20px;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  border-color: var(--decorative-element);
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 20px;
+  left: 20px;
+  border-style: solid;
+  border-width: 0 0 1px 1px;
+  border-color: var(--decorative-element);
 }
 
 .footer__title {
@@ -261,7 +300,7 @@ img {
 
 .text__link {
   text-decoration: none;
-  text-shadow: 2px 2px 0px #FF0070;
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 .text__link:hover {
@@ -279,7 +318,7 @@ img {
   border: 1px solid var(--text-color);
 }
 
-@media (max-width: 376px) and (orientation: portrait) {
+@media (max-width: 412px) and (orientation: portrait) {
   .header__theme-menu {
     display: grid;
     align-self: center;
@@ -302,15 +341,16 @@ img {
   }
 
   .header__text {
-    width: 355px;
+    max-width: 355px;
+    width: 100%;
   }
 
-  .decorative__element-top-right {
+  .header::before {
     top: 10px;
     right: 10px;
   }
   
-  .decorative__element-bottom-left {
+  .header::after {
     bottom: 10px;
     left: 10px;
   }
@@ -320,7 +360,7 @@ img {
     right: 38px;
   }
 
-  .dot {
+  .pseudo__element::before {
     top: 18px;
     right: 19px;
   }
@@ -331,7 +371,7 @@ img {
 
   .content__start {
     grid-template-columns: none;
-    margin-block-end: 50px;
+    margin-block-end: 28px;
   }
 
   .title__start {
@@ -365,12 +405,22 @@ img {
     margin-block-end: 10px;
   }
 
+  .footer::before {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .footer::after {
+    bottom: 10px;
+    left: 10px;
+  }
+
   .footer__title {
     font-size: clamp(7.25rem, 7.25rem + 0vw, 7.25rem)
   }
 }
 
-@media (max-width: 768px) and (orientation: portrait) and (min-width: 376px) {
+@media (max-width: 768px) and (orientation: portrait) and (min-width: 412px) {
   .header__theme-menu {
     display: grid;
     align-self: center;
@@ -383,7 +433,8 @@ img {
   }
 
   .header__text {
-    width: 364px;
+    max-width: 364px;
+    width: 100%;
   }
 
   .content__start {
@@ -395,7 +446,8 @@ img {
   }
 
   .title__middle {
-    width: 236px;
+    max-width: 236px;
+    width: 100%;
   }
 
   .content__last {
