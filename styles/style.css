@@ -72,8 +72,7 @@
   background-color: var(--accent-color);
 }
 
-.header::before ,
-.footer::before {
+.decorated-zone::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -85,8 +84,7 @@
   border-color: var(--decorative-element);
 }
 
-.header::after ,
-.footer::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -324,14 +322,12 @@ img {
     width: 100%;
   }
 
-  .header::before ,
-  .footer::before {
+  .decorated-zone::before {
     top: 10px;
     right: 10px;
   }
   
-  .header::after ,
-  .footer::after {
+  .decorated-zone::after {
     bottom: 10px;
     left: 10px;
   }
